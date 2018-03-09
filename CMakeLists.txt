@@ -593,7 +593,7 @@ if(UNIX)
     elseif(EMSCRIPTEN)
       # no need to link to system libs with emscripten
     else()
-      set(OPENCV_LINKER_LIBS ${OPENCV_LINKER_LIBS} dl m pthread rt)
+      set(OPENCV_LINKER_LIBS ${OPENCV_LINKER_LIBS} dl m pthread rt gcc_s gcc)
     endif()
   else()
     set(HAVE_PTHREAD 1)
